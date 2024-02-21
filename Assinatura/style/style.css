@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* VARIAVEIS */
+:root{
+    --cor-fundo: #EEEEEE;
+    --cor-fonte: #1b1b1b;
+    --cor-botao1: #302e2e;
+    --cor-botao2: ;
+    --cor-botao-baixar:#31c00586;
+    --fonte-principal: 'Inter';
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: var(--fonte-principal);   
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--cor-fundo);
+}
+
+form{
+    background-color: var(--fonte-fundo-form);
+    padding: 60px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    text-align: center;
+    width: 50%;
+}
+
+input, select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.button-container{
+    display: flex;
+    grid-column: span 2;
+}
+
+.button-visu, .button-baixar{ 
+    grid-column: span 2;
+    font-size: 19px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--cor-botao1);
+    color: var(--cor-fundo);
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.button-baixar:hover{
+    background-color: var(--cor-fundo);
+    color: var(--cor-fonte);
+}
+
+.button-baixar{
+    background-color: var(--cor-botao-baixar);
+    color: var(--cor-fonte);
+    border: 2px solid;
+    border-color: var(--cor-fonte);
+}
+
+.titulo{
+    grid-column: span 2;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.subtitulo{
+    grid-column: span 2;
+}
+
+.canva{
+    border: 1px solid ;
+    margin-top: 5px;
+}
+
+#canvas {
+    width: 600px;
+    height: 200px;
+}
+
+footer{
+    margin-top: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--cor-fonte);
+    color: var(--cor-fundo);
+    text-align: center;
+    width: 100%;
+    bottom: 0px;
+}
+
+@media only screen and (max-width: 1280px) {
+    body{
+        min-height: 50%;
+    }
+
+    .titulo{
+        margin-top: 5px;
+    }
+
+    form{
+        padding: 5px;
+    }
+
+    footer{
+        bottom: 20px;
+    }
+
+    .canva{
+        margin-top: 5px;
+        margin-bottom: 40px;
+    }
+    
+    .titulo{
+        margin-bottom: 0px;
+    }
+
+    .button-visu, .button-baixar{ 
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 0px 50px;
+    }
+    
+    .button-baixar{
+        background-color: var(--cor-fundo);
+        color: var(--cor-fonte);
+        border: 2px solid;
+        border-color: var(--cor-fonte);
+    }
+}
+
+
+
+
+
+
+
+

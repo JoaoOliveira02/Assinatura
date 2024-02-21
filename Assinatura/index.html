@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/puxarClubes.js"></script>
+    <script src="js/baixarImagem.js"></script>
+    <script src="js/imagem.js"></script>
+    <title>Assinatura SEME</title>
+</head>
+
+<body>    
+    <form>
+        <h2 class="titulo">ASSINATURA OUTLOOK</h2>
+
+        <h4 class="subtitulo">Digite as informações corretamente para a criação da assinatura do Outlook:</h4>
+
+        <select class="select" id="clube" name="clube" onchange="carregarInfoClube()">
+            
+            <option value="clube">Selecione o clube</option>
+            <option value="clube1">Clube Tall</option>
+            <option value="clube2">Clube Tosta</option>
+            <option value="clube3">Clube João</option>
+            
+        </select>
+
+        <input id="nome" name="nome" placeholder="Nome e Sobrenome" type="text" required>
+                               
+        <input id="cargo" name="cargo" placeholder="Cargo" type="text" required>
+                           
+        <input id="setor" name="setor" placeholder="Setor" type="text" required>
+
+        <input id="email" name="email" placeholder="Email" type="text" required>
+
+        <input id="telefone" name="telefone" placeholder="Telefone" type="text" required>
+        
+        <input id="logradouro" name="logradouro" placeholder="Logradouro" type="hidden" required>
+        
+        <input id="numero" name="numero" placeholder="Numero" type="hidden" required>                    
+    
+        <input id="cep" name="cep" placeholder="CEP" type="hidden" required>
+        
+        <input id="bairro" name="bairro" placeholder="Bairro" type="hidden" required>
+                                        
+        <input id="cidade" name="cidade" placeholder="Cidade" type="hidden" required> 
+                             
+        
+            <div class="button-container"></div>
+                    <button type="button" class="button-visu" onclick="gerarImagem()">Gerar Assinatura</button>                                    
+                    <button type="button" class="button-baixar" onclick="baixarImagem()">Baixar Assinatura</button>                                    
+            </div>
+    </form> 
+
+    <canvas class="canva" id="canvas" width="600" height="200" download="Assinatura"></canvas>
+    
+    <footer class="rodape">
+        <p class="rodape__texto">Div. de Tec. da Informação e Comunicação  - © 2024 </p>       
+    </footer>
+
+</body>
+
+</html>
