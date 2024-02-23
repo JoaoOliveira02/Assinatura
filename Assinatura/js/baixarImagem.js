@@ -1,7 +1,7 @@
 function baixarImagem(){
      // Obter o nome desejado para o download
-     var nomeParaDownload = "Assinatura.png";
-        
+     var nomeParaDownload = "Assinatura.png"; 
+     var canvas = document.getElementById('canvas');
      // Criar um link de download programaticamente
      var link = document.createElement('a');
      link.href = canvas.toDataURL(); // Converte o conteúdo do canvas para uma URL de dados

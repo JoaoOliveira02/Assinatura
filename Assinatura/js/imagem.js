@@ -9,11 +9,12 @@ function gerarImagem() {
     ctx.fillStyle = 'white';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    //A imagem é criada e carregada
     var imagem = new Image();
-    imagem.src = 'img/exemplo.jpg';
+    imagem.src = 'img/lg.png'; // Caminho relativo para a imagem
+
+    imagem.setAttribute('crossorigin', 'anonymous');
     
-    imagem.onload = function(){
+     imagem.onload = function() {
         //Esta linha desenha a imagem carregada no contexto do canvas
         ctx.drawImage(imagem, 20, 10, 190, 180);
 
@@ -55,7 +56,5 @@ function gerarImagem() {
         ctx.fillText(logradouro + ', ' + numero, distanciaX, 135);
         ctx.fillText(cep + ' | ' + bairro + ', ' + cidade + ' - SP', distanciaX, 155);
         ctx.fillText('www.prefeitura.sp.gov.br', distanciaX, 175);
-
     }
-    
 }  
